@@ -1,0 +1,74 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+/* 
+
+#container {
+  width: 100vw;
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: center;
+}  */
+
+/* ////////////////////// */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100vw;
+}
+
+#container {
+  justify-content: center;
+
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), 18px);
+  grid-template-rows: repeat(var(--grid-rows), 18px);
+  min-width: 0;
+  min-height: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  width: 18px;
+  height: 18px;
+  border: 2px solid black;
+}
+
+button {
+  background-color: rgb(89, 6, 166);
+  padding: 8px 12px;
+  color: aliceblue;
+  border: none;
+  box-shadow: 0px 2px 3px #000;
+  margin-top: 48px;
+}
+
+button:hover {
+  background-color: rgb(122, 20, 218);
+  transform: scale(1.01);
+}
+
+button:active {
+  transform: scale(0.98);
+}
